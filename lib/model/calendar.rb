@@ -8,7 +8,9 @@ class Calendar < Sequel::Model
 
   def synchronise_with_icalendar_receipt(ics_rcpt)
     sr = SyncResult.create(calendar:self, icalendar_receipt:ics_rcpt, response_body:'', attempted_at:Time.now)
-    sr.response_body = user.build_synchrograph.synchronise(gcalendar_id, ics_rcpt.icalendar)
+
+    gcal = GCalendar.new(client.user.build_client, gcalendar_id)
+    sr.response_body = user.build_synchrograph.synchronise(gcal, ics_rcpt.icalendar)
     sr.save
   end
 
