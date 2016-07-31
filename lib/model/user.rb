@@ -3,7 +3,8 @@ class User < Sequel::Model
   one_to_many :calendars
 
   def build_client
-    APIClientBuilder.new_client_with_refresh_token(refresh_token)
+    client_secrets = Google::APIClient::ClientSecrets.new(JSON.parse(Base64.decode64(Caloogle::Config.google.client_secrets)))
+    APIClientBuilder.new_client_with_refresh_token(refresh_token, client_secrets)
   end
 
   def build_synchrograph

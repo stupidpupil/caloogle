@@ -71,7 +71,7 @@ end
 
 use Rack::Session::Cookie, :secret => Caloogle::Config.rack.secret
 
-client_secrets = Google::APIClient::ClientSecrets.load(File.expand_path('../config/client_secrets.json', __FILE__))
+client_secrets = Google::APIClient::ClientSecrets.new(JSON.parse(Base64.decode64(Caloogle::Config.google.client_secrets)))
 
 use OmniAuth::Builder do
   provider :google_oauth2, client_secrets.client_id, client_secrets.client_secret, {scope:'email,https://www.googleapis.com/auth/calendar'}
