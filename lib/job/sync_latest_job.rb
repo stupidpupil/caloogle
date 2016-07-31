@@ -13,12 +13,13 @@ class SyncLatestJob < Que::Job
 
     latest_icalendar_receipt = c.icalendar_receipts_dataset.order(:received_at).last
 
-    if c.enabled
-      c.synchronise_with_icalendar_receipt latest_icalendar_receipt
-    end
+    destroy and return if !c.enabled
+
+    c.synchronise_with_icalendar_receipt latest_icalendar_receipt
 
     Pony.mail(
       to: latest_icalendar_receipt.from,
+      subject: 'Calendar updated!',
       body: 'Calendar updated!'
       )
   end
