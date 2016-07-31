@@ -69,7 +69,7 @@ class App < Sinatra::Base
   end
 end
 
-use Rack::Session::Cookie, :secret => Caloogle::Config.rack_secret
+use Rack::Session::Cookie, :secret => Caloogle::Config.rack.secret
 
 client_secrets = Google::APIClient::ClientSecrets.load(File.expand_path('../config/client_secrets.json', __FILE__))
 
