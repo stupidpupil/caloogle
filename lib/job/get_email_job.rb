@@ -30,7 +30,7 @@ class GetEmailJob < Que::Job
 
 
     if DB[:que_jobs].where(:job_class => self.class.to_s).count == 1
-      GetEmailJob.enqueue run_at:(Time.now + 10)
+      GetEmailJob.enqueue run_at:(Time.now + 120)
     end
   end
 
