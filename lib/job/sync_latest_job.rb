@@ -17,6 +17,10 @@ class SyncLatestJob < Que::Job
       c.synchronise_with_icalendar_receipt latest_icalendar_receipt
     end
 
+    Pony.mail(
+      to: latest_icalendar_receipt.from,
+      body: 'Calendar updated!'
+      )
   end
 
 end
