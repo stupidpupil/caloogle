@@ -1,0 +1,19 @@
+
+%form.form{method:'post'}
+  .row
+    .input-field.col.s6
+      %label{for:'email-address'} Email Address
+      %input#email-address.grey-text.darken-2{type:'text', readonly:true, value: calendar.email_address}
+
+    .input-field.col.s6
+      %input#enabled{type:'checkbox', name:'enabled', checked:('checked' if calendar.enabled)}
+      %label.checkbox{for:'enabled'} Allow updates by email
+
+  .row
+    .input-field.col.s12
+      %label{for:'approved_email_list'} Approved Senders
+      %input#approved_email_list{type:'text', name:'approved_email_list', value:calendar.approved_email_list, placeholder:'archibald@example.org, aeryn@example.com'}
+      
+
+  %button.btn.waves-effect.waves-light{type:'submit'}
+    Save Changes

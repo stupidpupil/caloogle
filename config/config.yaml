@@ -1,0 +1,20 @@
+defaults: &defaults
+  google:
+    client_secrets: <%= ENV['GOOGLE_CLIENT_SECRETS'] %>
+  mail:
+    username: <%= ENV['MAIL_USERNAME'] %>
+    password: <%= ENV['MAIL_PASSWORD'] %>
+  rack:
+    secret: <%= ENV['RACK_SECRET'] %>
+
+development:
+  <<: *defaults
+  db: 'postgres://localhost/caloogle_development'
+
+testing:
+  <<: *defaults
+  db: 'postgres://localhost/caloogle_testing'
+
+production:
+  <<: *defaults
+  db: <%= ENV['DATABASE_URL'] || 'postgres://localhost/caloogle-production'%>

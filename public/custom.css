@@ -1,0 +1,45 @@
+
+  header, main, footer {
+    padding-left: 240px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
+  
+  h2.page-title{
+    font-size:48px;
+    line-height:64px;
+    margin:0;
+  }
+
+  nav.top-nav{
+    height:64px;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    margin-bottom: 12px;
+  }
+
+  .side-nav a{
+    height: 32px;
+    line-height: 32px;
+  }
+
+  .side-nav li.seperator{
+    height: 32px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 32px;
+  }
+
+  .side-nav li.header{
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+  }
+
+  .side-nav li.brand h1{
+    font-size: 45px;
+  }
