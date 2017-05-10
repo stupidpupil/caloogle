@@ -6,7 +6,7 @@ gem 'mailman'
 
 gem 'omniauth-google-oauth2'
 gem 'sinatra'
-gem 'haml'
+gem 'haml', '>= 5.0.0'
 gem 'puma'
 
 gem 'settingslogic'
