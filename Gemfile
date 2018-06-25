@@ -4,8 +4,8 @@ gem 'i2gcal'
 
 gem 'mailman'
 
-gem 'omniauth-google-oauth2'
-gem 'sinatra'
+gem 'omniauth-google-oauth2', '>= 0.4.1'
+gem 'sinatra', '>= 2.0.2'
 gem 'haml', '>= 5.0.0'
 gem 'puma'
 
