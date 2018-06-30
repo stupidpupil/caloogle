@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'i2gcal'
 
-gem 'mailman'
+gem 'mailman', '>= 0.7.3'
 
 gem 'omniauth-google-oauth2', '>= 0.4.1'
 gem 'sinatra', '>= 2.0.2'
