@@ -64,6 +64,7 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.0.0)
     mustermann (1.0.2)
+    nio4r (2.5.7)
     oauth2 (1.4.0)
       faraday (>= 0.8, < 0.13)
       jwt (~> 1.0)
@@ -83,7 +84,8 @@ GEM
     pg (0.18.4)
     pony (1.11)
       mail (>= 2.0)
-    puma (3.6.0)
+    puma (5.3.1)
+      nio4r (~> 2.0)
     que (0.11.6)
     rack (2.0.5)
     rack-protection (2.0.3)
@@ -124,11 +126,11 @@ DEPENDENCIES
   omniauth-google-oauth2 (>= 0.4.1)
   pg
   pony
-  puma
+  puma (>= 4.3.8)
   que
   sequel
   settingslogic
   sinatra (>= 2.0.2)
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
