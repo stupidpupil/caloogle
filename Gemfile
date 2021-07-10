@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'i2gcal'
+gem 'i2gcal', '>= 0.0.2'
 
 gem 'mailman', '>= 0.7.3'
 

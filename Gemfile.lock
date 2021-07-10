@@ -1,19 +1,20 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.2.0)
+    activesupport (5.2.6)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.4.0)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     autoparse (0.3.3)
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
       multi_json (>= 1.0.0)
     celluloid (0.16.0)
       timers (~> 4.0.0)
-    concurrent-ruby (1.0.5)
+    concurrent-ruby (1.1.9)
     extlib (0.9.16)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
@@ -34,17 +35,19 @@ GEM
       tilt
     hashie (3.5.7)
     hitimes (1.3.0)
-    i18n (1.0.1)
+    i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    i2gcal (0.0.2)
+    i2gcal (0.0.3)
       activesupport (~> 5.0)
       google-api-client (= 0.8)
       icalendar (~> 2.4)
       uuidtools (~> 2.1)
-    icalendar (2.4.0)
+    icalendar (2.7.1)
+      ice_cube (~> 0.16)
+    ice_cube (0.16.3)
     jwt (1.5.6)
-    launchy (2.4.3)
-      addressable (~> 2.3)
+    launchy (2.5.0)
+      addressable (~> 2.7)
     listen (2.10.1)
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
@@ -59,10 +62,10 @@ GEM
       mail (>= 2.0.3)
       maildir (>= 0.5.0)
     mini_mime (1.0.0)
-    minitest (5.11.3)
-    multi_json (1.13.1)
+    minitest (5.14.4)
+    multi_json (1.15.0)
     multi_xml (0.6.0)
-    multipart-post (2.0.0)
+    multipart-post (2.1.1)
     mustermann (1.0.2)
     oauth2 (1.4.0)
       faraday (>= 0.8, < 0.13)
@@ -83,6 +86,7 @@ GEM
     pg (0.18.4)
     pony (1.11)
       mail (>= 2.0)
+    public_suffix (4.0.6)
     puma (3.6.0)
     que (0.11.6)
     rack (2.0.5)
@@ -94,10 +98,10 @@ GEM
     retriable (1.4.1)
     sequel (4.36.0)
     settingslogic (2.0.9)
-    signet (0.7.3)
+    signet (0.12.0)
       addressable (~> 2.3)
       faraday (~> 0.9)
-      jwt (~> 1.5)
+      jwt (>= 1.5, < 3.0)
       multi_json (~> 1.10)
     sinatra (2.0.3)
       mustermann (~> 1.0)
@@ -109,9 +113,9 @@ GEM
     tilt (2.0.8)
     timers (4.0.4)
       hitimes
-    tzinfo (1.2.5)
+    tzinfo (1.2.9)
       thread_safe (~> 0.1)
-    uuidtools (2.1.5)
+    uuidtools (2.2.0)
 
 PLATFORMS
   ruby
@@ -119,7 +123,7 @@ PLATFORMS
 DEPENDENCIES
   haikunator
   haml (>= 5.0.0)
-  i2gcal
+  i2gcal (>= 0.0.2)
   mailman (>= 0.7.3)
   omniauth-google-oauth2 (>= 0.4.1)
   pg
@@ -131,4 +135,4 @@ DEPENDENCIES
   sinatra (>= 2.0.2)
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
